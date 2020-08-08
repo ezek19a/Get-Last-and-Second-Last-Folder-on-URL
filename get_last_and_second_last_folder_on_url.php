@@ -1,4 +1,5 @@
 <?php
+
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $full = explode('/', $actual_link);
@@ -15,5 +16,7 @@ define('LAST', $realpath);
 define('SECOND', $secondpath);
 
 echo "LAST: " . LAST;
+
+echo "<br />";
 
 echo "SECOND: " . SECOND;
